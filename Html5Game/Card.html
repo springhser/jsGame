@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Card</title>
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <!--<link rel="stylesheet" type="text/css" href="css/css3transiton.css">-->
+    <link rel="stylesheet" type="text/css" href="css/css3fiip.css">
+</head>
+<body>
+<section id="game">
+    <div id="cards">
+        <div class="card">
+            <div class="face front"></div>
+            <div class="face back cardAK"></div>
+        </div>
+        <div class="card">
+            <div class="face front"></div>
+            <div class="face back cardAQ"></div>
+        </div>
+        <!--<div id="card1" class="card cardAK"></div>-->
+        <!--<div id="card2" class="card cardAQ"></div>-->
+    </div>
+</section>
+<script>
+    $(function(){
+//        $("#card1").addClass("moveAndScale");
+//        $("#card1").addClass("rotateRight");
+        $("#cards").children().each(function(index){
+            $(this).click(function(){
+               $(this).toggleClass("card-flipped");
+            });
+        });
+    });
+</script>
+</body>
+</html>
